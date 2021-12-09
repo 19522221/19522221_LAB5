@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Xem Cong Nhan";
+}
+
+@model CongNhanModel
+@{
+    <h2>Xem Cong Nhan</h2>
+    <form action="" method="post">
+        <label for="macongnhan">Mã công nhân</label> <input type="text" name="MaCongNhan" value="@Model.MaCongNhan"/><br>
+        <label for="tencongnhan">Tên công nhân</label> <input type="text" name="TenCongNhan" value="@Model.TenCongNhan"/><br>
+        <label for="gioitinh">Giới Tính</label> <input type="checkbox" name="GioiTinh" value="@Model.GioiTinh"/><br>
+        <label for="namsinh">Năm sinh</label> <input type="text" name="NamSinh" value="@Model.NamSinh"/><br>
+        <label for="nuocve">Nước về</label> <input type="text" name="NuocVe" value="@Model.NuocVe"/><br>
+    </form>
+}

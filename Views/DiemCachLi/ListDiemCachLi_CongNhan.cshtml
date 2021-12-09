@@ -1,0 +1,28 @@
+﻿@model List<CongNhanModel>
+@{
+    ViewData["Title"] = "Liệt kê công nhân từ điểm cách li";
+}
+<table border="1">
+    <tr>
+        <th>Mã Công Nhân</th>
+        <th>Tên Công Nhân</th>
+        
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @item.GetType().GetProperty("MaCongNhan").GetValue(item, null)
+        </td>
+        <td>
+            @item.GetType().GetProperty("TenCongNhan").GetValue(item, null)
+        </td>
+        <td>
+        <a href="DeleteCN?Id=@item.MaCongNhan">Xóa</a>
+        <a href="ViewCN?Id=@item.MaCongNhan" >View</a>
+        </td>
+         
+    </tr>
+    }
+</table>

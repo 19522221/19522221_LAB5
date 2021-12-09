@@ -1,0 +1,11 @@
+﻿@model List<_19522221_Lab5.Models.DiemCachLiModel>
+
+<form method ="post" asp-area="" asp-controller="DiemCachLi" asp-action ="ListDiemCachLi_CongNhan">
+    <select name="MaDiemCachLi" id="MaDiemCachLi">
+        @foreach (var item in Model)
+        {
+            <option value="@item.MaDiemCachLi">@item.TenDiemCachLi </option>
+        }
+     </select><br>
+     <input type="submit" value="Liệt Kê" name="submit" id="dcl" />
+</form>

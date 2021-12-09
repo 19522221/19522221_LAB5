@@ -1,7 +1,9 @@
 using System;
 
-namespace LAB5.Models {
-    public class ErrorViewModel {
+namespace _19522221_Lab5.Models
+{
+    public class ErrorViewModel
+    {
         public string RequestId { get; set; }
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
