@@ -67,7 +67,7 @@ namespace _19522221_Lab5.Models
             return list;
         }
 
-        public List<CongNhanModel> sqlListDiemCachLi_CongNhan(DiemCachLiModel dcl)
+        public List<CongNhanModel> sqlListDiemCachLi_CongNhan(string dcl)
         {
             List<CongNhanModel> list = new List<CongNhanModel>();
             using (SqlConnection conn = GetConnection())
@@ -75,7 +75,7 @@ namespace _19522221_Lab5.Models
                 conn.Open();
                 string str = @"SELECT * FROM congnhan where MaDiemCachLy = @dcl";
                 SqlCommand cmd = new SqlCommand(str, conn);
-                cmd.Parameters.AddWithValue("@dcl", dcl.MaDiemCachLi);
+                cmd.Parameters.AddWithValue("@dcl", dcl);
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
