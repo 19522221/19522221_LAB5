@@ -30,10 +30,10 @@ namespace _19522221_Lab5.Controllers
         }
 
         [HttpPost]
-        public IActionResult ListDiemCachLi_CongNhan(DiemCachLiModel id)
+        public IActionResult ListDiemCachLi_CongNhan(string MaDiemCachLi)
         {
             DataContext context = HttpContext.RequestServices.GetService(typeof(_19522221_Lab5.Models.DataContext)) as DataContext;
-            return View(context.sqlListDiemCachLi_CongNhan(id));
+            return View(context.sqlListDiemCachLi_CongNhan(MaDiemCachLi));
         }
 
         public IActionResult DeleteCN(string id)
